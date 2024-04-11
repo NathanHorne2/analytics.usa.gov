@@ -16,7 +16,8 @@ window.addEventListener("load", openDefinitionAccordionForAnchor);
 function openDefinitionAccordionForAnchor() {
   console.log(window);
   if (
-    window.location.pathname != "/definitions/" ||
+    (window.location.pathname != "/definitions" &&
+      window.location.pathname != "/definitions/") ||
     window.location.hash == ""
   ) {
     return;
