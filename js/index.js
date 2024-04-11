@@ -14,6 +14,7 @@ window.addEventListener("hashchange", openDefinitionAccordionForAnchor);
 window.addEventListener("load", openDefinitionAccordionForAnchor);
 
 function openDefinitionAccordionForAnchor() {
+  console.log(window);
   if (
     window.location.pathname != "/definitions/" ||
     window.location.hash == ""
@@ -22,6 +23,8 @@ function openDefinitionAccordionForAnchor() {
   }
 
   const accordionButtonWrapper = d3.select(window.location.hash);
+  console.log(accordionButtonWrapper);
+  console.log(hasChildElement(accordionButtonWrapper));
   if (hasChildElement(accordionButtonWrapper)) {
     const accordionButton = accordionButtonWrapper[0][0].children[0];
     if (accordionButton.ariaExpanded == "false") {
