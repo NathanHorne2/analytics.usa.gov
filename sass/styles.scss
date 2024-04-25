@@ -22,4 +22,6 @@
 @forward "select-form";
 @forward "top-pages";
 @forward "definitions";
-@forward "touchpoints";
+
+// Remove self-hosted Touchpoints JS inclusion for testing.
+//@forward "touchpoints";

@@ -4,7 +4,8 @@ import * as Q from "q";
 import gaEventHandler from "./lib/eventhandler";
 import formatters from "./lib/formatters";
 import BLOCKS from "./lib/blocks";
-require("./lib/touchpoints");
+// Remove self-hosted Touchpoints JS inclusion for testing.
+// require("./lib/touchpoints");
 
 gaEventHandler();
 
