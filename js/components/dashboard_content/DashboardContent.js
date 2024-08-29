@@ -55,7 +55,7 @@ function DashboardContent({ dataURL, dataPrefix, agency }) {
 
         <article className="section sessions-30-days-section">
           <div className="section__headline">
-            <h3>Daily Sessions in the Past 30 Days</h3>
+            <h3>Daily Sessions</h3>
           </div>
           <Sessions30Days dataHrefBase={dataHrefBase} />
         </article>
