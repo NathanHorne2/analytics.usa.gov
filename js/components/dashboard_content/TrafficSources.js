@@ -38,7 +38,7 @@ function TrafficSources({ dataHrefBase }) {
         <h4>
           <a href="/definitions#dimension_source_medium">Top Sources/Media</a>
         </h4>
-        <TopSourceMedia dataHrefBase={dataHrefBase} />
+        <TopSourceMedia dataHrefBase={dataHrefBase} maxItems={8} />
       </section>
     </>
   );
