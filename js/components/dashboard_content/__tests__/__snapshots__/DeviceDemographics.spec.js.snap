@@ -20,6 +20,16 @@ exports[`DeviceDemographics renders 1`] = `
         class="data bar-chart"
       />
     </figure>
+    <h4>
+      Top Screen Resolutions
+    </h4>
+    <figure
+      id="chart_screen_resolution"
+    >
+      <div
+        class="data bar-chart"
+      />
+    </figure>
   </section>
   <section
     class="desktop:grid-col-4 bar-chart-component"

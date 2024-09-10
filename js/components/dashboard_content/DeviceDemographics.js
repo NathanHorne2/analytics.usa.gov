@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import DevicesChart from "./DevicesChart";
 import BrowsersChart from "./BrowsersChart";
 import OperatingSystemsChart from "./OperatingSystemsChart";
+import ConsolidatedBarChart from "../chart/ConsolidatedBarChart";
 
 /**
  * Contains charts and other data visualizations for the user demographics
@@ -25,6 +26,12 @@ function DeviceDemographics({ dataHrefBase }) {
           <a href="/definitions#dimension_device_category">Devices</a>
         </h4>
         <DevicesChart dataHrefBase={dataHrefBase} />
+        <h4>Top Screen Resolutions</h4>
+        <ConsolidatedBarChart
+          dataUrl={`${dataHrefBase}/screen-resolution.json`}
+          chartDataKey={"screen_resolution"}
+          maxItems={8}
+        />
       </section>
 
       <section id="browsers" className="desktop:grid-col-4 bar-chart-component">
