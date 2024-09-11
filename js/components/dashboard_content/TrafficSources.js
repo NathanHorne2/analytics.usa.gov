@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import TopChannels from "./TopChannels";
-import TopSourceMedia from "./TopSourceMedia";
+import ConsolidatedBarChart from "../chart/ConsolidatedBarChart";
 
 /**
  * Contains charts and other data visualizations for the traffic sources
@@ -28,7 +27,11 @@ function TrafficSources({ dataHrefBase }) {
             Top Channels
           </a>
         </h4>
-        <TopChannels dataHrefBase={dataHrefBase} />
+        <ConsolidatedBarChart
+          dataUrl={`${dataHrefBase}/top-session-channel-group-30-days.json`}
+          chartDataKey={"session_default_channel_group"}
+          maxItems={10}
+        />
       </section>
 
       <section
@@ -38,7 +41,11 @@ function TrafficSources({ dataHrefBase }) {
         <h4>
           <a href="/definitions#dimension_source_medium">Top Sources/Media</a>
         </h4>
-        <TopSourceMedia dataHrefBase={dataHrefBase} maxItems={8} />
+        <ConsolidatedBarChart
+          dataUrl={`${dataHrefBase}/top-session-source-medium-30-days.json`}
+          chartDataKey={"session_source_medium"}
+          maxItems={10}
+        />
       </section>
     </>
   );

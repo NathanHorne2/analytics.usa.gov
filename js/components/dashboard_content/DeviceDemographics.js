@@ -30,7 +30,7 @@ function DeviceDemographics({ dataHrefBase }) {
         <ConsolidatedBarChart
           dataUrl={`${dataHrefBase}/screen-resolution.json`}
           chartDataKey={"screen_resolution"}
-          maxItems={8}
+          maxItems={10}
         />
       </section>
 
