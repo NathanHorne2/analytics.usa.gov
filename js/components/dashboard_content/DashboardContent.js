@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Config from "../../lib/config";
 import DeviceDemographics from "./DeviceDemographics";
 import Engagement from "./Engagement";
+import FileDownloads from "./FileDownloads";
 import LocationsAndLanguages from "./LocationsAndLanguages";
 import RealtimeVisitors from "./RealtimeVisitors";
 import Sessions30Days from "./Sessions30Days";
@@ -49,7 +50,7 @@ function DashboardContent({ dataURL, dataPrefix, agency }) {
 
         <article className="section">
           <div className="section__headline">
-            <h2>Historical Data and Trends</h2>
+            <h2>30 Day Historical Data and Trends</h2>
           </div>
         </article>
 
@@ -78,7 +79,7 @@ function DashboardContent({ dataURL, dataPrefix, agency }) {
           <div className="section__headline">
             <h2>
               <a href="/definitions#report_historical_top_traffic_sources">
-                Top Traffic Sources in the Last 30 Days
+                Top Traffic Sources
               </a>
             </h2>
           </div>
@@ -94,7 +95,7 @@ function DashboardContent({ dataURL, dataPrefix, agency }) {
           <div className="section__headline">
             <h2>
               <a href="/definitions#report_historical_device_demographics">
-                User Device Demographics in the Last 30 Days
+                User Device Demographics
               </a>
             </h2>
           </div>
@@ -102,6 +103,18 @@ function DashboardContent({ dataURL, dataPrefix, agency }) {
           <section className="section__chart">
             <div className="grid-row">
               <DeviceDemographics dataHrefBase={dataHrefBase} />
+            </div>
+          </section>
+        </article>
+
+        <article className="section device-demographics-section">
+          <div className="section__headline">
+            <h2>File Downloads</h2>
+          </div>
+
+          <section className="section__chart">
+            <div className="grid-row">
+              <FileDownloads dataHrefBase={dataHrefBase} />
             </div>
           </section>
         </article>
