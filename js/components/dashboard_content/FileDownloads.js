@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import DownloadFileExtensionChart from "./DownloadFileExtensionChart";
 import UsersWithFileDownloads from "./UsersWithFileDownloads";
+import TotalFileDownloads from "./TotalFileDownloads";
 
 /**
  * Contains charts and other data visualizations for the file downloads
@@ -20,18 +21,36 @@ function FileDownloads({ dataHrefBase }) {
   return (
     <>
       <section
-        id="file_extension_downloads"
+        id="file-extension-downloads"
         className="desktop:grid-col-6 bar-chart-component"
       >
         <h4>Downloads by File Extension</h4>
         <DownloadFileExtensionChart dataHrefBase={dataHrefBase} maxItems={10} />
       </section>
       <section
-        id="file_download_counts"
-        className="desktop:grid-col-6 bar-chart-component"
+        id="file-download-counts"
+        className="desktop:grid-col-6 section__rate"
       >
-        <h4>Users with File Downloads</h4>
-        <UsersWithFileDownloads dataHrefBase={dataHrefBase} />
+        <section>
+          <div className="grid-row">
+            <h4 className="grid-col-12">Total File Downloads</h4>
+          </div>
+          <div className="grid-row">
+            <span className="data grid-col-12">
+              <TotalFileDownloads dataHrefBase={dataHrefBase} />
+            </span>
+          </div>
+        </section>
+        <section>
+          <div className="grid-row">
+            <h4 className="grid-col-12">Total Users with File Downloads</h4>
+          </div>
+          <div className="grid-row">
+            <span className="data grid-col-12">
+              <UsersWithFileDownloads dataHrefBase={dataHrefBase} />
+            </span>
+          </div>
+        </section>
       </section>
     </>
   );

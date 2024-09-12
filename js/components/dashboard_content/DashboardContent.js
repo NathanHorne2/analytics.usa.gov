@@ -107,7 +107,7 @@ function DashboardContent({ dataURL, dataPrefix, agency }) {
           </section>
         </article>
 
-        <article className="section device-demographics-section">
+        <article className="section file-downloads-section">
           <div className="section__headline">
             <h2>File Downloads</h2>
           </div>
